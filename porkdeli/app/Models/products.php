@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class products extends Model
+{
+    use HasFactory;
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $connection = 'mysql';
+    
+    protected $fillable =[
+        'productname',
+        'category',
+        'brand',
+        'keyword'
+    ];
+    public $timestamps = false;  // Disable timestamps
+    
+}
